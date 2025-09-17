@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIEC - SIH Internal Hackathon 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20"
+    >
+      <div class="container mx-auto text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          SIH Internal Hackathon 2025
+        </h1>
+        <p class="text-lg md:text-2xl mb-8 opacity-90">
+          Hosted by Sreyas Innovation & Entrepreneurship Cell
+        </p>
+
+        <!-- Countdown -->
+        <div
+          id="countdown"
+          class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8"
+        >
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-3 sm:px-4 min-w-[70px] sm:min-w-[80px]"
+          >
+            <span id="days" class="block text-xl sm:text-2xl font-bold"
+              >00</span
+            >
+            <span class="text-xs sm:text-sm opacity-90">Days</span>
+          </div>
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-3 sm:px-4 min-w-[70px] sm:min-w-[80px]"
+          >
+            <span id="hours" class="block text-xl sm:text-2xl font-bold"
+              >00</span
+            >
+            <span class="text-xs sm:text-sm opacity-90">Hours</span>
+          </div>
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-3 sm:px-4 min-w-[70px] sm:min-w-[80px]"
+          >
+            <span id="minutes" class="block text-xl sm:text-2xl font-bold"
+              >00</span
+            >
+            <span class="text-xs sm:text-sm opacity-90">Minutes</span>
+          </div>
+          <div
+            class="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-3 sm:px-4 min-w-[70px] sm:min-w-[80px]"
+          >
+            <span id="seconds" class="block text-xl sm:text-2xl font-bold"
+              >00</span
+            >
+            <span class="text-xs sm:text-sm opacity-90">Seconds</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons (dynamic) -->
+        <div
+          id="cta-buttons"
+          class="flex justify-center gap-3 sm:gap-4 flex-wrap px-4"
+        >
+          <!-- JS will inject buttons based on auth -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Participate Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Participate?</h2>
+        <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          Be part of India's largest innovation movement and showcase your
+          skills on a national platform
+        </p>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
+        >
+          <!-- Benefit Cards -->
+          <div
+            class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-indigo-600 text-xl font-bold">🚀</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Innovation Movement
+            </h3>
+            <p class="text-gray-600">
+              Showcase your skills, learn new technologies, and contribute to
+              real-world solutions.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-purple-600 text-xl font-bold">🏆</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Compete for SIH 2025
+            </h3>
+            <p class="text-gray-600">
+              Top teams qualify for the national Smart India Hackathon 2025.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-pink-600 text-xl font-bold">🤝</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Team Collaboration
+            </h3>
+            <p class="text-gray-600">
+              Learn and grow through teamwork while solving challenging
+              problems.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-green-600 text-xl font-bold">💰</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Recognition & Prizes
+            </h3>
+            <p class="text-gray-600">
+              Earn certificates, cash prizes, and direct entries for winners.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-blue-600 text-xl font-bold">🎯</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Solve Real Problems
+            </h3>
+            <p class="text-gray-600">
+              Tackle actual challenges faced by government departments and
+              industries.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-yellow-600 text-xl font-bold">🎓</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Skill Development
+            </h3>
+            <p class="text-gray-600">
+              Enhance your technical and presentation skills with expert
+              guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathon Timeline Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Hackathon Timeline</h2>
+        <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          Follow our structured approach from ideation to final presentation
+        </p>
+
+        <div
+          class="flex flex-col lg:flex-row justify-center items-stretch gap-6 lg:gap-8"
+        >
+          <!-- Step 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex-1 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-indigo-600 text-xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Problem Statement & Ideation
+            </h3>
+            <p class="text-gray-600">
+              Teams select a problem statement, brainstorm solutions, and define
+              their approach.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex-1 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-purple-600 text-xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Prototype Development
+            </h3>
+            <p class="text-gray-600">
+              Develop a working prototype and maintain a repository for all code
+              and documentation.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 flex-1 hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-pink-600 text-xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Final Presentation & Evaluation
+            </h3>
+            <p class="text-gray-600">
+              Submit final presentation, live demo link, and project repo for
+              mentor scoring and admin evaluation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Statements Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            SIH 2025 Problem Statements
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Explore challenging problem statements from various government
+            departments and industries
+          </p>
+        </div>
+
+        <!-- Search and Controls -->
+        <div
+          class="mb-6 flex flex-col sm:flex-row gap-4 justify-between items-stretch sm:items-center"
+        >
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search problem statements..."
+            class="flex-1 sm:max-w-md px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+          />
+
+          <div class="flex items-center gap-2 justify-center sm:justify-end">
+            <label class="text-gray-600 text-sm">Show</label>
+            <select
+              id="entriesPerPage"
+              class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+            >
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+            <span class="text-gray-600 text-sm">entries</span>
+          </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="min-w-full">
+              <thead
+                class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+              >
+                <tr>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm"
+                  >
+                    S.No.
+                  </th>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm"
+                  >
+                    Organization
+                  </th>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm"
+                  >
+                    Title
+                  </th>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm hidden sm:table-cell"
+                  >
+                    Category
+                  </th>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm hidden md:table-cell"
+                  >
+                    PS Number
+                  </th>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm hidden lg:table-cell"
+                  >
+                    Ideas
+                  </th>
+                  <th
+                    class="py-3 px-3 sm:py-4 sm:px-6 text-left font-semibold text-sm hidden lg:table-cell"
+                  >
+                    Theme
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="psTableBody" class="divide-y divide-gray-200">
+                <!-- Table rows will be inserted here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex justify-center mt-6 gap-2"></div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="text-center py-8 hidden">
+          <p class="text-gray-500">
+            No problem statements found matching your search.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentorship Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Mentorship Support</h2>
+        <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          Get guidance from experienced mentors throughout the hackathon — from
+          idea validation to final presentation
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-blue-600 text-xl font-bold">💻</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3 text-gray-800">
+              Technical Mentors
+            </h3>
+            <p class="text-gray-600">
+              Experts in software & hardware to guide you through coding and
+              prototyping.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-green-600 text-xl font-bold">🎯</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3 text-gray-800">Domain Experts</h3>
+            <p class="text-gray-600">
+              Industry professionals to help align your solution with real-world
+              needs.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transform transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto"
+            >
+              <span class="text-purple-600 text-xl font-bold">📝</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3 text-gray-800">
+              Continuous Feedback
+            </h3>
+            <p class="text-gray-600">
+              Mentors provide feedback at each stage to help teams improve and
+              progress.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-6">Ready to Build the Future?</h2>
+        <p class="text-lg mb-8 max-w-3xl mx-auto opacity-90">
+          Join <span class="font-semibold">Smart India Hackathon 2025</span> at
+          Sreyas Institute of Engineering & Technology. Showcase your skills,
+          solve real-world problems, and win exciting rewards!
+        </p>
+        <div
+          class="flex justify-center space-x-3 sm:space-x-4 flex-wrap gap-y-3"
+        >
+          <a
+            href="/register"
+            class="px-4 sm:px-6 py-3 bg-white text-indigo-700 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base"
+          >
+            Register Your Team
+          </a>
+          <a
+            href="/login"
+            class="px-4 sm:px-6 py-3 border-2 border-white font-semibold rounded-lg hover:bg-white hover:text-indigo-700 transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base"
+          >
+            Already Registered? Sign In
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div
+        class="container mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+      >
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">SIH 2025</h3>
+          <p class="text-sm mb-4">
+            Organized at
+            <span class="font-semibold text-white"
+              >Sreyas Institute of Engineering & Technology</span
+            >. A celebration of innovation, collaboration, and problem-solving.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#timeline"
+                class="hover:text-white transition-colors duration-200"
+                >Timeline</a
+              >
+            </li>
+            <li>
+              <a
+                href="#problem-statements"
+                class="hover:text-white transition-colors duration-200"
+                >Problem Statements</a
+              >
+            </li>
+            <li>
+              <a
+                href="/register"
+                class="hover:text-white transition-colors duration-200"
+                >Register</a
+              >
+            </li>
+            <li>
+              <a
+                href="/login"
+                class="hover:text-white transition-colors duration-200"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Contact</h3>
+          <div class="space-y-2 text-sm">
+            <p>Sreyas Institute of Engineering & Technology</p>
+            <p>
+              Email:
+              <a
+                href="mailto:codebreakers260@gmail.com"
+                class="hover:text-white transition-colors duration-200"
+                >codebreakers260@gmail.com</a
+              >
+            </p>
+            <p>Phone: +91 8765210</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 border-t border-gray-700 pt-6 text-sm">
+        © 2025 SIH Hackathon · All rights reserved
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // ===== Countdown Timer =====
+      const targetDate = new Date("2025-09-17T09:00:00").getTime();
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          daysEl.innerText = "00";
+          hoursEl.innerText = "00";
+          minutesEl.innerText = "00";
+          secondsEl.innerText = "00";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        daysEl.innerText = String(days).padStart(2, "0");
+        hoursEl.innerText = String(hours).padStart(2, "0");
+        minutesEl.innerText = String(minutes).padStart(2, "0");
+        secondsEl.innerText = String(seconds).padStart(2, "0");
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      // ===== Dynamic CTA Buttons =====
+      const ctaContainer = document.getElementById("cta-buttons");
+      const isLoggedIn = false; // replace with actual auth logic
+
+      if (isLoggedIn) {
+        ctaContainer.innerHTML = `
+          <a href="/dashboard" class="inline-block bg-white text-indigo-600 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base">
+            View Dashboard
+          </a>
+        `;
+      } else {
+        ctaContainer.innerHTML = `
+          <a href="/register" class="inline-block bg-white text-indigo-600 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base">
+            Register Now
+          </a>
+          <a href="/login" class="inline-block bg-white/20 backdrop-blur-sm border-2 border-white text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-indigo-600 transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base">
+            Sign In
+          </a>
+        `;
+      }
+
+      // ===== Problem Statements Table =====
+      const tbody = document.getElementById("psTableBody");
+      const searchInput = document.getElementById("searchInput");
+      const entriesSelect = document.getElementById("entriesPerPage");
+      const paginationContainer = document.getElementById("pagination");
+      const noResultsDiv = document.getElementById("noResults");
+
+      let problemStatements = [
+        // Sample data - replace with actual API data
+        {
+          sNo: 1,
+          org: "Ministry of Education",
+          title: "Digital Learning Platform",
+          category: "Software",
+          psNumber: "SIH2025_001",
+          ideas: 12,
+          theme: "Education",
+        },
+        {
+          sNo: 2,
+          org: "Department of Health",
+          title: "Healthcare Management System",
+          category: "Software",
+          psNumber: "SIH2025_002",
+          ideas: 8,
+          theme: "Healthcare",
+        },
+        {
+          sNo: 3,
+          org: "Ministry of Agriculture",
+          title: "Smart Farming Solution",
+          category: "Hardware",
+          psNumber: "SIH2025_003",
+          ideas: 15,
+          theme: "Agriculture",
+        },
+        {
+          sNo: 4,
+          org: "Department of Transportation",
+          title: "Traffic Management AI",
+          category: "Software",
+          psNumber: "SIH2025_004",
+          ideas: 10,
+          theme: "Transportation",
+        },
+        {
+          sNo: 5,
+          org: "Ministry of Environment",
+          title: "Pollution Monitor",
+          category: "Hardware",
+          psNumber: "SIH2025_005",
+          ideas: 7,
+          theme: "Environment",
+        },
+      ];
+
+      let currentPage = 1;
+      let entriesPerPage = parseInt(entriesSelect.value);
+
+      // Fetch function (placeholder for actual API)
+      async function fetchProblemStatements() {
+        try {
+          // Replace with actual API call
+          // const response = await fetch("https://api.sih.gov.in/problem-statements");
+          // const data = await response.json();
+          // problemStatements = data.problemStatements;
+          renderTable();
+        } catch (err) {
+          console.error("Error fetching problem statements:", err);
+          renderTable(); // Show sample data on error
+        }
+      }
+
+      function renderTable() {
+        const query = searchInput.value.toLowerCase().trim();
+        const filtered = problemStatements.filter(
+          (ps) =>
+            ps.org.toLowerCase().includes(query) ||
+            ps.category.toLowerCase().includes(query) ||
+            ps.theme.toLowerCase().includes(query) ||
+            ps.title.toLowerCase().includes(query) ||
+            ps.psNumber.toLowerCase().includes(query)
+        );
+
+        entriesPerPage = parseInt(entriesSelect.value);
+        const totalPages = Math.ceil(filtered.length / entriesPerPage) || 1;
+        currentPage = Math.min(currentPage, totalPages);
+
+        const start = (currentPage - 1) * entriesPerPage;
+        const end = start + entriesPerPage;
+        const pageData = filtered.slice(start, end);
+
+        // Show/hide no results message
+        if (filtered.length === 0) {
+          tbody.innerHTML = "";
+          noResultsDiv.classList.remove("hidden");
+          paginationContainer.innerHTML = "";
+          return;
+        } else {
+          noResultsDiv.classList.add("hidden");
+        }
+
+        // Render table rows
+        tbody.innerHTML = "";
+        pageData.forEach((ps, index) => {
+          const row = document.createElement("tr");
+          row.classList.add(
+            "hover:bg-gray-50",
+            "transition-colors",
+            "duration-200"
+          );
+          row.innerHTML = `
+            <td class="py-3 px-3 sm:py-4 sm:px-6 font-medium text-gray-900 text-sm">${
+              ps.sNo
+            }</td>
+            <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 text-sm">
+              <div class="truncate max-w-[120px] sm:max-w-none" title="${
+                ps.org
+              }">${ps.org}</div>
+            </td>
+            <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 font-medium text-sm">
+              <div class="truncate max-w-[150px] sm:max-w-none" title="${
+                ps.title
+              }">${ps.title}</div>
+            </td>
+            <td class="py-3 px-3 sm:py-4 sm:px-6 hidden sm:table-cell">
+              <span class="px-2 py-1 text-xs font-semibold rounded-full ${
+                ps.category === "Software"
+                  ? "bg-blue-100 text-blue-800"
+                  : "bg-green-100 text-green-800"
+              }">
+                ${ps.category}
+              </span>
+            </td>
+            <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 font-mono text-xs hidden md:table-cell">${
+              ps.psNumber
+            }</td>
+            <td class="py-3 px-3 sm:py-4 sm:px-6 text-center hidden lg:table-cell">
+              <span class="px-2 py-1 text-xs font-semibold bg-purple-100 text-purple-800 rounded-full">
+                ${ps.ideas}
+              </span>
+            </td>
+            <td class="py-3 px-3 sm:py-4 sm:px-6 text-gray-700 text-sm hidden lg:table-cell">${
+              ps.theme
+            }</td>
+          `;
+          tbody.appendChild(row);
+        });
+
+        // Render pagination
+        renderPagination(totalPages);
+      }
+
+      function renderPagination(totalPages) {
+        paginationContainer.innerHTML = "";
+
+        if (totalPages <= 1) return;
+
+        // Previous button
+        if (currentPage > 1) {
+          const prevBtn = createPaginationButton("‹", currentPage - 1);
+          prevBtn.classList.add("font-bold");
+          paginationContainer.appendChild(prevBtn);
+        }
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+          if (
+            i === 1 ||
+            i === totalPages ||
+            (i >= currentPage - 1 && i <= currentPage + 1)
+          ) {
+            const btn = createPaginationButton(i, i, i === currentPage);
+            paginationContainer.appendChild(btn);
+          } else if (i === currentPage - 2 || i === currentPage + 2) {
+            const span = document.createElement("span");
+            span.textContent = "...";
+            span.className = "px-3 py-2 text-gray-500";
+            paginationContainer.appendChild(span);
+          }
+        }
+
+        // Next button
+        if (currentPage < totalPages) {
+          const nextBtn = createPaginationButton("›", currentPage + 1);
+          nextBtn.classList.add("font-bold");
+          paginationContainer.appendChild(nextBtn);
+        }
+      }
+
+      function createPaginationButton(text, page, isActive = false) {
+        const btn = document.createElement("button");
+        btn.textContent = text;
+        btn.className = `px-3 py-2 sm:px-4 text-sm rounded-lg transition-colors duration-200 ${
+          isActive
+            ? "bg-indigo-600 text-white shadow-md"
+            : "bg-white text-gray-700 border border-gray-300 hover:bg-indigo-50 hover:border-indigo-300"
+        }`;
+        btn.addEventListener("click", () => {
+          currentPage = page;
+          renderTable();
+        });
+        return btn;
+      }
+
+      // Event listeners
+      searchInput.addEventListener("input", () => {
+        currentPage = 1;
+        renderTable();
+      });
+
+      entriesSelect.addEventListener("change", () => {
+        currentPage = 1;
+        renderTable();
+      });
+
+      // Initialize
+      fetchProblemStatements();
+
+      // ===== Smooth scrolling for anchor links =====
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
